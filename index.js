@@ -16,6 +16,8 @@ var val;
 var tasks = [];
 var li;
 
+
+//IT WILL ADD THE TASK THROUGH 'ADD' BUTTON
 btn.addEventListener("click", function () {
   val = input.value;
   if (val == "") {
@@ -31,7 +33,7 @@ btn.addEventListener("click", function () {
     <div class="tick-mark" id=${date} data-value = false></div>
     </div>
 
-      <div class="tooltipbox" id=${date} data-value = false ><small>mark as complete</small></div>
+      <div class="tooltipbox" id=${date} data-value = false ><small><strong>mark as complete</strong></small></div>
       <div class="tooltip" id=${date} data-value = false ><span class="span" data-value = false id=${date}> ${val} </span></div>
       <i id=${date} data-value = false class="fa-solid fa-trash-can del" ></i></div>`;
     tasklist.append(li);
@@ -41,6 +43,8 @@ btn.addEventListener("click", function () {
   }
 });
 
+
+//IT WILL ADD THE TASK THROUGH 'ENTER' BUTTON 
 function handler(e) {
   if (e.key == "Enter") {
     val = e.target.value;
@@ -72,6 +76,7 @@ function handler(e) {
   }
 }
 
+//AFTER DELETE IT WILL BE UPDATE THE DOM
 function addtodom(tasks) {
   tasklist.innerHTML = "";
   for (let i = 0; i < tasks.length; i++) {
@@ -79,6 +84,7 @@ function addtodom(tasks) {
   }
 }
 
+//IT WILL REMOVE THAT PARTICULAR TASK 
 function remove(deleteid) {
   for (let i = 0; i < tasks.length; i++) {
     if (deleteid == tasks[i].id) {
@@ -90,6 +96,7 @@ function remove(deleteid) {
   }
 }
 
+//WHEN WE WANT TO MARK THE TASK 
 function checkbox(tick) {
   for (let i = 0; i < tasks.length; i++) {
     if (tick == tasks[i].id) {
@@ -122,6 +129,8 @@ function checkbox(tick) {
   }
 }
 
+//1-WHEN WE CLICK ON 'DELETE-ICON' IT WILL RUNS THE DELETE FUNCTION!
+//2-WHEN WE CLICK ON 'ICON, TICKMARK, NOTCH' IT WILL RUNS THE CHECKBOX FUNCTION!
 function handleclick(e) {
   const trgt = e.target;
   if (trgt.className == "fa-solid fa-trash-can del") {
@@ -139,5 +148,46 @@ function handleclick(e) {
   }
 }
 
+//WHEN WE MOUSEOVER THE  ICON IT WILL APPEAR THE 'MARKS AS COMPLETE'
+function handlemouse(e) {
+  const mouse = e.target;
+  if (
+    mouse.className == "fa-solid fa-circle-notch" ||
+    mouse.className == "icon"
+  ) {
+    let tooltip = document.querySelectorAll(".tooltipbox");
+
+    for (let i = 0; i < tasks.length; i++) {
+      if (tooltip[i].id == mouse.id) {
+        tooltip[i].style.display = "block";
+
+        return;
+      }
+    }
+  }
+}
+
+//WHEN WE MOUSEOUT THE ICON IT WILL DISAPPEAR THE 'MARK AS COMPLETE'
+function handleleave(e) {
+  const mousel = e.target;
+  if (
+    mousel.className == "fa-solid fa-circle-notch" ||
+    mousel.className == "icon"
+  ) {
+    let tooltip = document.querySelectorAll(".tooltipbox");
+
+    for (let i = 0; i < tasks.length; i++) {
+      if (tooltip[i].id == mousel.id) {
+        tooltip[i].style.display = "none";
+        console.log(tooltip[i]);
+        return;
+      }
+    }
+  }
+}
+
+
 input.addEventListener("keyup", handler);
 document.addEventListener("click", handleclick);
+document.addEventListener("mouseover", handlemouse);
+document.addEventListener("mouseout", handleleave);
