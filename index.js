@@ -33,7 +33,7 @@ btn.addEventListener("click", function () {
     <div class="tick-mark" id=${date} data-value = false></div>
     </div>
 
-      <div class="tooltipbox" id=${date} data-value = false ><small><strong>mark as complete</strong></small></div>
+      <div class="tooltipbox" id=${date} data-value = false ><small><strong>Mark As Complete</strong></small></div>
       <div class="tooltip" id=${date} data-value = false ><span class="span" data-value = false id=${date}> ${val} </span></div>
       <i id=${date} data-value = false class="fa-solid fa-trash-can del" ></i></div>`;
     tasklist.append(li);
@@ -64,7 +64,7 @@ function handler(e) {
 
       </div>
 
-      <div class="tooltipbox" id=${date} data-value = false><small>mark as complete</small></div>
+      <div class="tooltipbox" id=${date} data-value = false><small><strong>Mark As Complete</strong></small></div>
       <div class="tooltip" ><span class="span" id=${date} data-value = false> ${val} </span></div>
       <i id=${date} data-value = false class="fa-solid fa-trash-can del"></i></div>`;
       tasklist.append(li);
