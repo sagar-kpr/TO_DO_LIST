@@ -103,6 +103,7 @@ function checkbox(tick) {
       let findtick = document.querySelectorAll(".tick-mark");
       let findspan = document.querySelectorAll(".span");
       let findicon = document.querySelectorAll(".icon");
+      let findtooltip = document.querySelectorAll(".tooltipbox");
       for (let j = 0; j < findtick.length; j++) {
         if (tick == findtick[j].id && tick == findspan[j].id) {
           let val = findspan[j].getAttribute("data-value");
@@ -114,14 +115,14 @@ function checkbox(tick) {
             findicon[j].style.boxShadow =
               "0px 0px 20px 8px rgba(255,255,255,0.7) inset";
             findspan[j].setAttribute("data-value", true);
-
+            findtooltip[j].setAttribute("data-value", true);
             return;
           }
           findtick[j].style.display = "none";
           findspan[j].style.textDecoration = "none";
           findicon[j].style.boxShadow = "none";
           findspan[j].setAttribute("data-value", false);
-
+          findtooltip[j].setAttribute("data-value", false);
           return;
         }
       }
@@ -158,9 +159,13 @@ function handlemouse(e) {
     let tooltip = document.querySelectorAll(".tooltipbox");
 
     for (let i = 0; i < tasks.length; i++) {
-      if (tooltip[i].id == mouse.id) {
+      let val = tooltip[i].getAttribute("data-value");
+      console.log(val);
+      if (tooltip[i].id == mouse.id && val == "false") {
         tooltip[i].style.display = "block";
-
+        return;
+      } else if (tooltip[i].id == mouse.id && val == true) {
+        tooltip[i].style.display = "none";
         return;
       }
     }
