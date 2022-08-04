@@ -20,6 +20,7 @@
     box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
   }
   
+//BOX1 CONTAIN THE HEADER PART
   #box1 {
     width: 100%;
     height: 150px;
@@ -37,6 +38,8 @@
     color: white;
     border-radius: 25px;
   }
+
+//BOX2 CONTAIN THE REST OF THE PART
   #box2 {
     width: 100%;
     height: 577px;
