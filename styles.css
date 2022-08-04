@@ -20,7 +20,7 @@
     box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
   }
   
-//BOX1 CONTAIN THE HEADER PART
+/* BOX1 CONTAIN THE HEADER PART */
   #box1 {
     width: 100%;
     height: 150px;
@@ -39,7 +39,7 @@
     border-radius: 25px;
   }
 
-//BOX2 CONTAIN THE REST OF THE PART
+/* BOX2 CONTAIN THE REST OF THE PART */
   #box2 {
     width: 100%;
     height: 577px;
@@ -59,7 +59,7 @@
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   }
 
-//CONTAIN SEARCH-FORM AND COUNTBOX
+/* CONTAIN SEARCH-FORM AND COUNTBOX */
   #add-task {
     width: 100%;
     height: 100px;
@@ -69,7 +69,7 @@
     justify-content: center;
   }
 
-//SEARCH FORM  AND BUTTON HANDLER
+/* SEARCH FORM  AND BUTTON HANDLER */
  .search-form {
     width: 100%;  
     margin-top: 10px;
@@ -105,7 +105,7 @@
     border: 1px solid black;
   }
 
-//TOTAL NUMBER OF TASK 
+/* TOTAL NUMBER OF TASK */
   #countbox {
     width: 95%;
     height: auto;
@@ -122,7 +122,7 @@
     font-family: "Courier New", Courier, monospace;
   }
  
-//CONTAIN 'UL-LIST'
+/* CONTAIN 'UL-LIST' */
   #task-box {
     width: 100%;
     height: 398px;
@@ -132,7 +132,7 @@
     justify-content: center;
     scroll-behavior: smooth;
   }
-//STYLING 'UL' AND 'LI'
+/* STYLING 'UL' AND 'LI' */
   ul {
     list-style-type: none;
     margin: 0px;
@@ -143,7 +143,8 @@
     display: flex;
     justify-content: center;
   }
-  //TEST BOX WHICH HAVE ALL BELOW STRUCTURE OF HTML
+
+ /* TEST BOX WHICH HAVE ALL BELOW STRUCTURE OF HTML */
   .test {
     width: 90%;
     height: 55px;
@@ -160,7 +161,7 @@
     background-color: #d9d9d9;
   }
 
-//RANDOM COLORED-ICON STYLING
+/* RANDOM COLORED-ICON STYLING */
   .icon {
     width: 35px;
     height: 32px;
@@ -175,7 +176,7 @@
     position: relative;
   }
   
-//TOOLTIP BOX WHICH SHOW AS A MESSAGE BOX
+/* TOOLTIP BOX WHICH SHOW AS A MESSAGE BOX */
   .tooltipbox {
     position: absolute;
     top: -20px;
@@ -202,7 +203,7 @@
     border-top-right-radius: 5px;
   }
 
- //IT CONTAIN THE DATA ENETRED BY USER FROM INPUT
+ /* IT CONTAIN THE DATA ENETRED BY USER FROM INPUT */
   .tooltip {
     width: 70%;
     height: 25px;
@@ -213,7 +214,7 @@
     text-align: center;
   }
 
-//DELETE ICON
+/* DELETE ICON */
   .del {
     cursor: pointer;
     margin: 10px;
@@ -222,7 +223,7 @@
     color: red;
   }
   
-//TICK-MARK BOX
+/* TICK-MARK BOX */
   .tick-mark {
     width: 20px;
     height: 7px;
@@ -236,7 +237,7 @@
   }
 
 
-//RESPONSIVE DESIGN
+/* RESPONSIVE DESIGN */
   @media screen and (max-width: 550px) {
     main {
       width: 95%;
