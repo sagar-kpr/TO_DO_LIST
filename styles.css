@@ -149,7 +149,7 @@
     position: relative;
   }
   
-  /* .tooltipbox {
+  .tooltipbox {
     position: absolute;
     top: 155px;
     left: 108px;
@@ -173,7 +173,7 @@
     border-width: 1rem 1rem 0 0;
     transform: rotate(130deg);
     border-top-right-radius: 5px;
-  } */
+  }
   
   .tooltip {
     width: 70%;
